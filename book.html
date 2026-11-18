@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book Now | Dream House Cinemas</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="book">
+
+<section class="section-pad">
+  <div class="wrap" style="max-width:820px;">
+    <div style="text-align:center;">
+      <div class="eyebrow">&mdash; Let&rsquo;s Create Together &mdash;</div>
+      <h2 style="font-size:clamp(24px,4vw,34px);margin-top:12px;">Tell us about <span class="gold-grad">your project</span></h2>
+      <p style="color:var(--text-body);font-size:14px;margin-top:12px;">We&rsquo;re here to bring your vision to life.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px;">
+      <div class="tab-card active" data-tab="production" id="tabProduction">
+        <div class="t">🎬 PRODUCTION ENQUIRY</div>
+        <div class="s">For Film / Video Production</div>
+      </div>
+      <div class="tab-card" data-tab="rental" id="tabRental">
+        <div class="t">📷 EQUIPMENT RENTAL REQUEST</div>
+        <div class="s">For Camera &amp; Lighting Rental</div>
+      </div>
+    </div>
+
+    <form id="bookForm" style="margin-top:28px;display:flex;flex-direction:column;gap:16px;" onsubmit="return handleSubmit(event)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <input class="field" type="text" placeholder="Your Name *" required />
+        <input class="field" type="tel" placeholder="Phone / WhatsApp *" required />
+      </div>
+      <input class="field" type="email" placeholder="Email Address *" required />
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <input class="field" type="text" placeholder="Project Type *" required />
+        <input class="field" type="text" placeholder="Shoot Location *" required />
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <input class="field" type="date" placeholder="Expected Shoot Date" />
+        <input class="field" type="text" placeholder="Budget Range (Optional)" />
+      </div>
+      <textarea class="field" placeholder="Tell us about your project * (Brief about your project, script, requirements, number of shoot days, etc.)" required></textarea>
+
+      <div style="text-align:center;margin-top:8px;">
+        <button type="submit" class="btn btn-primary" style="padding-left:40px;padding-right:40px;">SUBMIT ENQUIRY <span class="btn-arrow">&rarr;</span></button>
+        <p style="margin-top:14px;color:var(--text-muted);font-size:12px;">🔒 We respect your privacy. Your information is safe with us.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-card');
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+  }));
+
+  function handleSubmit(e){
+    e.preventDefault();
+    alert('Thanks! Your enquiry has been received. We will get back to you shortly.');
+    e.target.reset();
+    return false;
+  }
+</script>
+
+<script src="js/components.js"></script>
+</body>
+</html>

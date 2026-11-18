@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Production Services | Dream House Cinemas</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="production">
+
+<section class="section-pad" style="padding-bottom:56px;">
+  <div class="wrap grid-2">
+    <div>
+      <h2 style="font-size:clamp(28px,4vw,38px);">Production <span class="gold-grad">Services</span></h2>
+      <div style="width:56px;height:3px;background:var(--gold-1);margin:16px 0 20px;"></div>
+      <p style="color:#e2e2e2;font-size:15px;font-weight:600;">From Concept to Screen. We Bring Your Vision to Life.</p>
+      <p style="margin-top:14px;color:var(--text-body);font-size:14.5px;line-height:1.8;max-width:48ch;">
+        Dream House Cinemas provides end-to-end production services for brands, agencies, businesses, filmmakers and organizations. From creative development to final delivery, we handle every step with passion, precision and professional excellence.
+      </p>
+      <a href="book.html" class="btn btn-primary" style="margin-top:26px;">DISCUSS YOUR PROJECT <span class="btn-arrow">&rarr;</span></a>
+    </div>
+    <div class="split-img" style="aspect-ratio:16/10;">
+      <img src="assets/production-sunset.jpg" alt="Production crew filming at sunset" />
+    </div>
+  </div>
+</section>
+
+<div style="text-align:center;">
+  <div class="eyebrow">&mdash; What We Produce &mdash;</div>
+</div>
+
+<section class="wrap" style="padding-top:34px;">
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
+    <div class="feature-card"><div class="ic">🎬</div><div class="label">AD FILM PRODUCTION</div></div>
+    <div class="feature-card"><div class="ic">📷</div><div class="label">DOCUMENTARY PRODUCTION</div></div>
+    <div class="feature-card"><div class="ic">🏢</div><div class="label">CORPORATE FILMS</div></div>
+    <div class="feature-card"><div class="ic">⭐</div><div class="label">BRAND FILMS</div></div>
+    <div class="feature-card"><div class="ic">📣</div><div class="label">PROMOTIONAL VIDEOS</div></div>
+    <div class="feature-card"><div class="ic">▶️</div><div class="label">DIGITAL &amp; SOCIAL MEDIA</div></div>
+    <div class="feature-card" style="grid-column:span 2;"><div class="ic">⚙️</div><div class="label">PRODUCTION SUPPORT</div></div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top:52px;padding-bottom:52px;">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--card-border);padding-top:34px;">
+    <div style="display:flex;align-items:center;gap:12px;max-width:340px;">
+      <span style="font-size:20px;">👥</span>
+      <div>
+        <div style="font-size:13.5px;color:#e2e2e2;">Big or small, every story deserves great production.</div>
+        <div class="gold" style="font-size:12.5px;font-weight:600;margin-top:2px;">Let&rsquo;s create something amazing together.</div>
+      </div>
+    </div>
+    <a href="book.html" class="btn btn-primary">START A PROJECT WITH US <span class="btn-arrow">&rarr;</span></a>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;color:#d8d8d8;">
+      <span>♡ Creative Excellence</span>
+      <span>🔴 On-Time Delivery</span>
+      <span>✅ Professional Team</span>
+      <span>🏅 End-to-End Support</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Responsive: widen feature grid to 4 cols on larger screens
+  const mq = window.matchMedia('(min-width:640px)');
+  const grid = document.querySelector('.feature-card').parentElement;
+  function applyGrid(){ grid.style.gridTemplateColumns = mq.matches ? 'repeat(4,1fr)' : 'repeat(2,1fr)'; }
+  applyGrid(); mq.addEventListener('change', applyGrid);
+</script>
+
+<script src="js/components.js"></script>
+</body>
+</html>
